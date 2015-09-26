@@ -86,9 +86,17 @@
 
             </app1.olx.com.olx_app1.custom.CustomEditText>
 
+
+            <AutoCompleteTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/autocomplete_email"
+                android:layout_width="fill_parent"
+                android:hint="Email Address"
+                android:layout_height="wrap_content" />
             <app1.olx.com.olx_app1.custom.CustomEditText
                 android:id="@+id/ceEmailAddress"
                 android:layout_width="match_parent"
+                android:visibility="gone"
                 android:layout_height="wrap_content">
 
             </app1.olx.com.olx_app1.custom.CustomEditText>

@@ -1,5 +1,7 @@
 package app1.olx.com.olx_app1.fragment;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +24,8 @@ import net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 import app1.olx.com.olx_app1.Objects.PostDO;
 import app1.olx.com.olx_app1.R;
@@ -33,7 +38,7 @@ public class CreatePostFragment extends Fragment {
 	DataBasehelper dbHelper;
 	CustomEditText ceTitle, ceDescription, ceCategory, ceLocation, ceName, ceEmailAddress, cePhoneNumber;
 	CustomPictureHolder pictureHolder;
-	AutoCompleteTextView autocomplete_country, autocomplete_category;
+	AutoCompleteTextView autocomplete_country, autocomplete_category, autocomplete_email;
 	Button btnPost;
 	FloatingActionsMenu CapturePictures;
 
@@ -87,6 +92,8 @@ public class CreatePostFragment extends Fragment {
 
 	    autocomplete_country = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_country);
 	    autocomplete_category = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_category);
+	    autocomplete_email  = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_email);
+
 	    autocomplete_country.setText("Delhi");
 	    autocomplete_category.setText("Mobile - Android");
 
@@ -104,6 +111,29 @@ public class CreatePostFragment extends Fragment {
 			    new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Category);
 	    autocomplete_category.setAdapter(adapterCategory);
 
+
+	    Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
+	    Account[] accounts = AccountManager.get(getActivity()).getAccounts();
+	    ArrayList<String> emails = new ArrayList<String>();
+	    for (Account account : accounts) {
+		    if (emailPattern.matcher(account.name).matches()) {
+			    String possibleEmail = account.name;
+			    emails.add(account.name);
+		    }
+	    }
+	    // Get a reference to the AutoCompleteTextView in the layout
+
+
+	    String[] email = new String[emails.size()];
+	    for(int i = 0 ; i < emails.size() ; i++)
+	    {
+		    email[i] = emails.get(i);
+	    }
+// Create the adapter and set it to the AutoCompleteTextView
+	    ArrayAdapter<String> adapterEmail =
+			    new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, email);
+	    autocomplete_email.setAdapter(adapterEmail);
+	    autocomplete_email.setText(email[0]);
 
 	    pictureHolder.setVisibility(View.GONE);
 
