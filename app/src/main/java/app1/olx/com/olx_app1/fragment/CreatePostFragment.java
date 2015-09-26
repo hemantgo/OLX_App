@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import app1.olx.com.olx_app1.CreatePostActivity;
 import app1.olx.com.olx_app1.Objects.PostDO;
 import app1.olx.com.olx_app1.R;
 import app1.olx.com.olx_app1.custom.CustomEditText;
@@ -94,7 +95,7 @@ public class CreatePostFragment extends Fragment {
 	    autocomplete_category = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_category);
 	    autocomplete_email  = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_email);
 
-	    autocomplete_country.setText("Delhi");
+	    autocomplete_country.setText(((CreatePostActivity)getActivity()).selectedLocation);
 	    autocomplete_category.setText("Mobile - Android");
 
 	    String[] countries = getResources().getStringArray(R.array.city);
