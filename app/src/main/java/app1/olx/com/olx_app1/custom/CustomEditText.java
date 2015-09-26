@@ -76,6 +76,24 @@ public class CustomEditText extends LinearLayout
 		errorLayout = (RelativeLayout)this.findViewById(R.id.errorLayout);
 		errorText = (TextView)this.findViewById(R.id.errorText);
 
+		etTitle.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+			}
+
+			@Override
+			public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+				if(!charSequence.toString().equalsIgnoreCase(""))
+					setError("");
+			}
+
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+			}
+		});
+
 		errorLayout.setVisibility(GONE);
 	}
 

@@ -205,17 +205,53 @@ public class CreatePostFragment extends Fragment {
 	    btnPost.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View view) {
-			    PostDO postDO = new PostDO();
-			    postDO.title = ceTitle.getText();
-			    postDO.description = ceDescription.getText();
-			    postDO.category = ceCategory.getText();
-			    postDO.location = ceLocation.getText();
-			    postDO.name = ceName.getText();
-			    postDO.email = ceEmailAddress.getText();
-			    postDO.phone_number = cePhoneNumber.getText();
 
-			    dbHelper.postAD(postDO);
-			    Toast.makeText(getActivity(), "Posted it!", Toast.LENGTH_LONG).show();
+			    if(ceTitle.getText().equalsIgnoreCase(""))
+			    {
+				    ceTitle.setError("Please fill Title.");
+			    }
+			    else if(ceDescription.getText().equalsIgnoreCase(""))
+			    {
+				    ceDescription.setError("Please fill Description.");
+			    }
+			    else if(ceName.getText().equalsIgnoreCase(""))
+			    {
+				    ceName.setError("Please fill Name.");
+			    }
+			    else if(cePhoneNumber.getText().equalsIgnoreCase(""))
+			    {
+				    cePhoneNumber.setError("Please fill Phone Number.");
+			    }
+			    else if(cePhoneNumber.getText().toString().length() != 10)
+			    {
+				    cePhoneNumber.setError("Please put correct phone number");
+			    }
+			    else
+			    {
+
+				    ceTitle.setError("");
+				    ceDescription.setError("");
+				    ceCategory.setError("");
+				    ceLocation.setError("");
+				    ceName.setError("");
+				    ceEmailAddress.setError("");
+				    cePhoneNumber.setError("");
+
+				    PostDO postDO = new PostDO();
+				    postDO.title = ceTitle.getText();
+				    postDO.description = ceDescription.getText();
+				    postDO.category = ceCategory.getText();
+				    postDO.location = ceLocation.getText();
+				    postDO.name = ceName.getText();
+				    postDO.email = ceEmailAddress.getText();
+				    postDO.phone_number = cePhoneNumber.getText();
+
+				    dbHelper.postAD(postDO);
+				    Toast.makeText(getActivity(), "Posted it!", Toast.LENGTH_LONG).show();
+			    }
+
+
+
 		    }
 	    });
 
