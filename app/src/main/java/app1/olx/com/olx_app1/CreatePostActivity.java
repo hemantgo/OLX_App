@@ -1,9 +1,11 @@
 package app1.olx.com.olx_app1;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,7 +33,11 @@ public class CreatePostActivity extends ActionBarActivity {
 					.commit();
 		}
 	}
-
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		Log.e("onActivityResult", "Activity");
+		super.onActivityResult(requestCode, resultCode, data);
+	}
 
 
 }

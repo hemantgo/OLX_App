@@ -136,6 +136,11 @@ public class CustomEditText extends LinearLayout
 		etTitle.addTextChangedListener(new CharacterCountErrorWatcher(tilTitle, min, max));
 	}
 
+	public EditText getEditText()
+	{
+		return etTitle;
+	}
+
 	public String getText()
 	{
 		return etTitle.getText().toString();

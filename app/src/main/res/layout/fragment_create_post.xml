@@ -1,10 +1,12 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:background="#FFFFFF"
-      tools:context=".CreatePostActivity$PlaceholderFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFFFFF"
+              android:orientation="vertical"
+              xmlns:fab="http://schemas.android.com/apk/res-auto"
+
+              tools:context=".CreatePostActivity$PlaceholderFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,183 +14,220 @@
         android:layout_weight="1">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="20dip"
+            tools:context=".SplashActivity$PlaceholderFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+            <app1.olx.com.olx_app1.custom.CustomPictureHolder
+                android:id="@+id/pictureHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomPictureHolder>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/ceTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/ceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/ceCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/ceLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/ceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/ceEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <app1.olx.com.olx_app1.custom.CustomEditText
+                android:id="@+id/cePhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </app1.olx.com.olx_app1.custom.CustomEditText>
+
+
+            <!--
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilTitle"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Title"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etTitle"
+                            android:maxLength="10"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilDescription"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Description"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etDescription"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilCategory"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Category"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etCategory"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilLocation"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Location"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etLocation"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilName"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Name"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etName"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilEmailID"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Email Address"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etEmailID"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tilPhoneNumber"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Phone Number"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etPhoneNumber"
+                            style="@style/EditText_Register"
+                            android:focusable="true" />
+                    </android.support.design.widget.TextInputLayout>
+            -->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/CapturePictures"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dip"
-        android:paddingRight="20dip"
-        android:paddingTop="20dip"
-        android:paddingBottom="10dip"
-        android:orientation="vertical"
-        android:background="#FFFFFF"
-        tools:context=".SplashActivity$PlaceholderFragment">
+        android:layout_above="@+id/btnPost"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="46dp"
+        android:layout_marginRight="16dp"
 
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/ceTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/ceDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/ceCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/ceLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/ceName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/ceEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
-        <app1.olx.com.olx_app1.custom.CustomEditText
-            android:id="@+id/cePhoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </app1.olx.com.olx_app1.custom.CustomEditText>
+        fab:fab_addButtonColorNormal="@color/fab_icon_back"
+        fab:fab_addButtonColorPressed="@color/my_icons"
 
 
-<!--
+        fab:fab_addButtonPlusIconColor="@color/my_icons"
+        fab:fab_labelStyle="@style/menu_labels_style"
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilTitle"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Title"
-                android:layout_height="wrap_content"
-                android:id="@+id/etTitle"
-                android:maxLength="10"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilDescription"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Description"
-                android:layout_height="wrap_content"
-                android:id="@+id/etDescription"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilCategory"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Category"
-                android:layout_height="wrap_content"
-                android:id="@+id/etCategory"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilLocation"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Location"
-                android:layout_height="wrap_content"
-                android:id="@+id/etLocation"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilName"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Name"
-                android:layout_height="wrap_content"
-                android:id="@+id/etName"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilEmailID"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Email Address"
-                android:layout_height="wrap_content"
-                android:id="@+id/etEmailID"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tilPhoneNumber"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:hint="Phone Number"
-                android:layout_height="wrap_content"
-                android:id="@+id/etPhoneNumber"
-                style="@style/EditText_Register"
-                android:focusable="true" />
-        </android.support.design.widget.TextInputLayout>
--->
+        >
+    </net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu>
 
 
-    </LinearLayout>
-</ScrollView>
     <Button
-        android:layout_weight="0"
+
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="Post It."
-        android:textSize="22dip"
-        android:textStyle="bold"
+        android:layout_weight="0"
         android:background="@color/green_primary"
-        android:id="@+id/btnPost" />
+        android:text="Post It."
+        android:textColor="#FFFFFF"
+        android:textSize="22dip"
+        android:textStyle="bold"/>
 
-</LinearLayout>
+</RelativeLayout>

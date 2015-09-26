@@ -298,19 +298,24 @@
     </style>
 
 
-    <!--<style name="FloatingActionButton" parent="android:Widget.Material.Button">
+    <style name="FloatingActionButton" parent="android:Widget.Material.Button">
         <item name="android:background">@drawable/fab</item>
         <item name="android:stateListAnimator">@anim/animation</item>
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
-    </style>-->
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/gray3</item>
+    </style>
 
 
-   <!-- <style name="FloatingActionButton.Mini">
+   <style name="FloatingActionButton.Mini">
         <item name="android:layout_width">45dp</item>
         <item name="android:layout_height">45dp</item>
         <item name="android:layout_margin">8dp</item>
-    </style>-->
+    </style>
 
     <style name="ThemeOverlay.YourApp" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:colorBackground">@color/my_primary_text</item>
