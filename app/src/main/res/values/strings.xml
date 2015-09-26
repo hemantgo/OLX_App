@@ -5,4 +5,42 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+
+
+    <string-array name="city">
+        <item>Delhi</item>
+        <item>Mumbai</item>
+        <item>Pune</item>
+        <item>Hyderabad</item>
+        <item>Ahmedabad</item>
+        <item>Alwar</item>
+        <item>Jaipur</item>
+
+
+    </string-array>
+
+    <string-array name="category">
+        <item>Mobile - Windows</item>
+        <item>Mobile - Nokia</item>
+        <item>Mobile - IPhone</item>
+        <item>Mobile - BlackBerry</item>
+        <item>Mobile - Android</item>
+
+        <item>Cars - Flat</item>
+        <item>Cars - Honda</item>
+        <item>Cars - maruti</item>
+        <item>Cars - Hundai</item>
+        <item>Cars - Volkswagon</item>
+        <item>Cars - Skoda</item>
+
+        <item>Electronics - Air Conditioner</item>
+        <item>Electronics - TV</item>
+        <item>Electronics - Refrigertor</item>
+        <item>Electronics - Camera</item>
+        <item>Electronics - Washing Machine</item>
+
+
+
+    </string-array>
+
 </resources>

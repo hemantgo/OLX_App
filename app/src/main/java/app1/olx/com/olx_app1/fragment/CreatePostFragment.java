@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
 import net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu;
@@ -30,6 +32,7 @@ public class CreatePostFragment extends Fragment {
 	DataBasehelper dbHelper;
 	CustomEditText ceTitle, ceDescription, ceCategory, ceLocation, ceName, ceEmailAddress, cePhoneNumber;
 	CustomPictureHolder pictureHolder;
+	AutoCompleteTextView autocomplete_country, autocomplete_category;
 	Button btnPost;
 	FloatingActionsMenu CapturePictures;
 
@@ -80,6 +83,26 @@ public class CreatePostFragment extends Fragment {
 	    ceEmailAddress = (CustomEditText)rootView.findViewById(R.id.ceEmailAddress);
 	    cePhoneNumber = (CustomEditText)rootView.findViewById(R.id.cePhoneNumber);
 	    pictureHolder= (CustomPictureHolder)rootView.findViewById(R.id.pictureHolder);
+
+	    autocomplete_country = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_country);
+	    autocomplete_category = (AutoCompleteTextView)rootView.findViewById(R.id.autocomplete_category);
+	    autocomplete_country.setText("Delhi");
+	    autocomplete_category.setText("Mobile - Android");
+
+	    String[] countries = getResources().getStringArray(R.array.city);
+// Create the adapter and set it to the AutoCompleteTextView
+	    ArrayAdapter<String> adapter =
+			    new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, countries);
+	    autocomplete_country.setAdapter(adapter);
+
+
+	    // Get a reference to the AutoCompleteTextView in the layout
+	    String[] Category = getResources().getStringArray(R.array.category);
+// Create the adapter and set it to the AutoCompleteTextView
+	    ArrayAdapter<String> adapterCategory =
+			    new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, countries);
+	    autocomplete_category.setAdapter(adapterCategory);
+
 
 	    pictureHolder.setVisibility(View.GONE);
 

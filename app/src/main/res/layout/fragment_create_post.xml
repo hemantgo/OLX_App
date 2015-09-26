@@ -28,7 +28,8 @@
             <app1.olx.com.olx_app1.custom.CustomPictureHolder
                 android:id="@+id/pictureHolder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
 
             </app1.olx.com.olx_app1.custom.CustomPictureHolder>
 
@@ -49,13 +50,31 @@
             <app1.olx.com.olx_app1.custom.CustomEditText
                 android:id="@+id/ceCategory"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
             </app1.olx.com.olx_app1.custom.CustomEditText>
+
+            <AutoCompleteTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/autocomplete_category"
+                android:layout_width="fill_parent"
+                android:hint="Category"
+                android:layout_height="wrap_content" />
+
+
+            <AutoCompleteTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/autocomplete_country"
+              android:layout_width="fill_parent"
+              android:hint="Location"
+
+              android:layout_height="wrap_content" />
 
             <app1.olx.com.olx_app1.custom.CustomEditText
                 android:id="@+id/ceLocation"
                 android:layout_width="match_parent"
+                android:visibility="gone"
                 android:layout_height="wrap_content">
 
             </app1.olx.com.olx_app1.custom.CustomEditText>
