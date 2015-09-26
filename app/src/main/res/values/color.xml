@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#CC000000</color>
+
+
+    <color name="my_primary">#ED1C24</color>
+    <color name="my_primary_dark">#CC0000</color>
+    <!--#CC0000-->
+    <color name="my_primary_light">#B3E5FC</color>
+    <color name="my_accent">#ED1C24</color>
+    <color name="my_primary_text">#ffffff</color>
+    <color name="my_secondary_text">#ffffff</color>
+    <color name="my_icons">#FFFFFF</color>
+    <color name="my_divider">#B6B6B6</color>
+    <color name="brown_trans">#2B0000</color>
+    <color name="fab_icon_back">#73CF41</color>
+    <color name="black_semi_transparent">#73CF41</color>
+
+    <color name="green_primary">#07CF41</color>
+
+    <color name="green_primary1">#73CF41</color>
+    <color name="blue_primary">#0431A2</color>
+    <color name="red_primary">#F94877</color>
+    <color name="white_primary">#FFFFFF</color>
+    <color name="warning_primary">#F5A623</color>
+    <color name="error_primary">#DB4437</color>
+
+    <color name="gray1">#333333</color>
+    <color name="gray2">#666666</color>
+    <color name="gray3">#999999</color>
+    <color name="gray4">#CCCCCC</color>
+    <color name="gray5">#EEEEEE</color>
+
+
+    <color name="default_screen_bg">#f9f9f9</color>
+    <color name="rounded_container_bg">#222222</color>
+    <color name="rounded_container_border">#3b3f44</color>
+    <color name="light_gray_header_color">#646663</color>
+</resources>
