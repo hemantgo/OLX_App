@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu;
 
@@ -100,7 +101,7 @@ public class CreatePostFragment extends Fragment {
 	    String[] Category = getResources().getStringArray(R.array.category);
 // Create the adapter and set it to the AutoCompleteTextView
 	    ArrayAdapter<String> adapterCategory =
-			    new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, countries);
+			    new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Category);
 	    autocomplete_category.setAdapter(adapterCategory);
 
 
@@ -184,6 +185,7 @@ public class CreatePostFragment extends Fragment {
 			    postDO.phone_number = cePhoneNumber.getText();
 
 			    dbHelper.postAD(postDO);
+			    Toast.makeText(getActivity(), "Posted it!", Toast.LENGTH_LONG).show();
 		    }
 	    });
 
